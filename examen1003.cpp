@@ -38,6 +38,10 @@ public:
   void imprimir() {
     cout << "El nombre de la persona es " << this->nombre << ", su DNI es " << this->DNI << " y su edad es " << this->edad << " años." << endl;
   }
+  // Métodos varios.
+  bool mayorEdad(){
+    return this->edad>=18;
+  }
 
 };
 
@@ -45,6 +49,8 @@ public:
 int main(){
   Persona fulanito("Fulano","44844848A", 30);
   fulanito.imprimir();
+
+  cout << "La persona " << fulanito.getNombre() << "es mayor de edad: " << fulanito.mayorEdad() << endl;
 
 
 
