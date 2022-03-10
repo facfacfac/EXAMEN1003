@@ -13,7 +13,7 @@ bool VIP;
 
 public:
   // Constructor.
-  Persona (string nombre, string DNI, int edad = 18, bool VIP = false) {
+  Persona (string nombre, string DNI, int edad = 18) {
     setNombre(nombre);
     setDNI(DNI);
     setEdad(edad);
@@ -48,32 +48,32 @@ public:
   }
   calcularVIP() {
     bool VIP = false;
-    int numer1 = 0;
+    int numero1 = 0;
     int numero2 = 0;
     int numero3 = 0;
     int numero4 = 0;
     int numero5 = 0;
-    cout << "Introduce tres numeros:" << endl;
-    cout << "Numero 1: "
+    cout << "Introduce tres numeros: " << endl;
+    cout << "numero1:" << endl;
     cin >> numero1;
-    cout << "Numero 2: "
+    cout << "numero2:" << endl;
     cin >> numero2;
-    cout << "Numero 3: "
+    cout << "numero3:" << endl;
     cin >> numero3;
-    if ()(numero1+numero2+numero3)%11 == 0) {
+
+    if ((numero1+numero2+numero3)%11 == 0) {
       VIP = true;
-    } else if ((numero1+numero2+numero3%11 != 0) && (numero1 == 13 || numero 2 == 13 numero = || 13) {
-      cout << "Puedes introducir dos números más:" << endl;
-      cout << "Numero 4: "
-      cin >> Numero4;
-      cout << "Numero 5: "
-      cin >> Numero 5;
-      if ((numero1+numero2+numero3+numero4+numero5)%11 == 0) {
-        VIP = true;
+    } else {
+      if (numero1 == 13 || numero2 == 13 || numero3 == 13) {
+        cout << "Introduce dos numeros más:" << endl;
+        cout << "Numero4:" << endl;
+        cin >> numero4;
+        cout << "Numero5" << endl;
+        cin >> numero5;
+        if ((numero1+numero2+numero3+numero4+numero5)%11 == 0) VIP = true;
       }
     }
   }
-
 };
 
 
@@ -84,13 +84,6 @@ int main(){
   vector<int> numerosVIP;
 
   cout << "La persona " << fulanito.getNombre() << "es mayor de edad: " << fulanito.mayorEdad() << endl;
-
-  cout << "Operacion para saber si la persona" << fulanito.getNombre() << "es VIP: introduce tres numeros." << endl;
-  cout << "Introduce el primer numero: "
-  cin << numero;
-  numerosVIP.push_back(numero);
-  cout << endl;
-  cout << "Introduce el primer numero: "
 
 
 
