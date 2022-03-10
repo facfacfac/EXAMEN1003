@@ -47,7 +47,7 @@ public:
     return this->edad>=18;
   }
   calcularVIP() {
-    bool VIP = false;
+    this->VIP = false;
     int numero1 = 0;
     int numero2 = 0;
     int numero3 = 0;
@@ -62,7 +62,7 @@ public:
     cin >> numero3;
 
     if ((numero1+numero2+numero3)%11 == 0) {
-      VIP = true;
+      this->VIP = true;
     } else {
       if (numero1 == 13 || numero2 == 13 || numero3 == 13) {
         cout << "Introduce dos numeros más:" << endl;
@@ -70,7 +70,7 @@ public:
         cin >> numero4;
         cout << "Numero5" << endl;
         cin >> numero5;
-        if ((numero1+numero2+numero3+numero4+numero5)%11 == 0) VIP = true;
+        if ((numero1+numero2+numero3+numero4+numero5)%11 == 0) this->VIP = true;
       }
     }
   }
